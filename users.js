@@ -43,16 +43,16 @@ class AbstractUser {
 
 
 class User extends AbstractUser {
-    constructor(id, firstName, lastName=null, userName=null, joinedAt=new Date) {
-        super(id, firstName, lastName, userName, joinedAt);
+    constructor(id, firstName, lastName=null, userName=null) {
+        super(id, firstName, lastName, userName);
         this.isAdmin = false;
     }
 }
 
 
 class Admin extends AbstractUser {
-    constructor(id, firstName, lastName=null, userName=null, joinedAt=new Date) {
-        super(id, firstName, lastName, userName, joinedAt);
+    constructor(id, firstName, lastName=null, userName=null) {
+        super(id, firstName, lastName, userName);
         this.isAdmin = true;
     }
 }
